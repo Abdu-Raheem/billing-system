@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-13 11:54:47.909191",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "item_name",
+  "category",
+  "qty",
+  "column_break_ltpl",
+  "rate",
+  "tax_percent",
+  "amount",
+  "row_tax"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "item_name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.category",
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "category",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "qty",
+   "reqd": 1
+  },
+  {
+   "default": "Item.rate",
+   "fetch_from": "item.rate",
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "rate",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "tax_percent",
+   "fieldtype": "Float",
+   "label": "tax_percent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "row_tax",
+   "fieldtype": "Currency",
+   "label": "row_tax",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ltpl",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-10-13 15:52:35.308915",
+ "modified_by": "Administrator",
+ "module": "billing_app",
+ "name": "Billing Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
